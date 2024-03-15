@@ -13,6 +13,13 @@ import java.util.stream.Collectors;
 @Service
 public class FacultyServiceImpl implements FacultyService {
 
+    @PostConstruct
+    public void initFacultys() {
+        add(new Faculty("Gryffindor","Red"));
+        add(new Faculty("Hufflepuff","Yellow"));
+        add(new Faculty("Ravenclaw","Blue"));
+        add(new Faculty("Slytherin","Green"));
+    }
     private final FacultyRepository facultyRepository;
 
     public FacultyServiceImpl(FacultyRepository facultyRepository) {

@@ -12,6 +12,11 @@ import java.util.stream.Collectors;
 @Service
 public class StudentServiceImpl implements StudentService {
 
+    @PostConstruct
+    public void initStudents() {
+        add(new Student("Nino",23));
+        add(new Student("Set", 54));
+    }
     private final StudentRepository studentRepository;
 
     public StudentServiceImpl(StudentRepository studentRepository) {
