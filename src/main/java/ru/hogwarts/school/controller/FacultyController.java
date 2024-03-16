@@ -44,4 +44,12 @@ public class FacultyController {
         return facultyService.getByColor(color);
     }
 
+    @GetMapping("getByNameOrColorIgnoreCase")
+    public List<Faculty> getByNameOrColorIgnoreCase(
+            @RequestParam String name,
+            @RequestParam String color
+    ) {
+        return facultyService.getByNameOrColorIgnoreCase(name, color);
+    }
+
 }

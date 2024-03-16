@@ -56,4 +56,9 @@ public class FacultyServiceImpl implements FacultyService {
                 .filter(it -> it.getColor().equals(color))
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public List<Faculty> getByNameOrColorIgnoreCase(String name, String color) {
+        return facultyRepository.findByNameIgnoreCaseOrColorIgnoreCase(name, color);
+    }
 }
