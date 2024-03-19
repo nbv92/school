@@ -52,4 +52,8 @@ public class FacultyController {
         return facultyService.getByNameOrColorIgnoreCase(name, color);
     }
 
+    @GetMapping("{id}/students")
+    public List<Student> getStudents(@PathVariable Long id) {
+        return facultyService.getStudents(id);
+    }
 }
