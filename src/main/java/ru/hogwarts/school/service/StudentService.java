@@ -1,5 +1,6 @@
 package ru.hogwarts.school.service;
 
+import org.springframework.web.bind.annotation.GetMapping;
 import ru.hogwarts.school.model.Faculty;
 import ru.hogwarts.school.model.Student;
 
@@ -20,5 +21,11 @@ public interface StudentService {
     List<Student> getByAgeBetween(int ageFrom, int ageTo);
 
     Faculty getFaculty(Long id);
+
+    public int getStudentsCount();
+
+    public int getAverageAge();
+
+    public List<Student> getLastFive();
 
 }

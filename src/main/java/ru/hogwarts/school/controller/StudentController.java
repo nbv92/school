@@ -1,6 +1,7 @@
 package ru.hogwarts.school.controller;
 
 
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -72,4 +73,18 @@ public class StudentController {
         avatarService.uploadAvatar(studentId, avatar);
         return ResponseEntity.ok().build();
     }
+    @GetMapping("getStudentCount")
+    public int getStudentsCount() {
+        return studentService.getStudentsCount();
+    };
+
+    @GetMapping("getAverageAge")
+    public int getAverageAge() {
+        return studentService.getAverageAge();
+    };
+
+    @GetMapping("getLastFive")
+    public List<Student> getLastFive() {
+        return studentService.getLastFive();
+    };
 }
