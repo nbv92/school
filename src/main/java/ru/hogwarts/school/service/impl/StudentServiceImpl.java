@@ -106,6 +106,7 @@ public class StudentServiceImpl implements StudentService {
                 .map(Student::getName)
                 .map(String::toUpperCase)
                 .filter(it -> it.startsWith("A"))
+                .sorted()
                 .collect(Collectors.toList());
     }
 
