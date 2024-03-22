@@ -32,6 +32,9 @@ public interface StudentService {
 
     Double getAverageAgeWithStreams();
 
+    void printSynchronized();
+
+    void printParallel();
 
 
 }
