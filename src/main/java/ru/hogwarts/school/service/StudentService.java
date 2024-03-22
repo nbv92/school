@@ -28,4 +28,10 @@ public interface StudentService {
 
     public List<Student> getLastFive();
 
+    List<String> getAllStudentsStartsWithA();
+
+    Double getAverageAgeWithStreams();
+
+
+
 }

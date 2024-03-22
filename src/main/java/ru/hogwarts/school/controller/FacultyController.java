@@ -56,4 +56,11 @@ public class FacultyController {
     public List<Student> getStudents(@PathVariable Long id) {
         return facultyService.getStudents(id);
     }
+
+    @GetMapping("longestName")
+    public String getLongestName() {
+        return facultyService.getLongestName();
+    }
+
+
 }
